@@ -23,12 +23,10 @@ public class Controller {
         studentMenu = new StudentMenu(this);
     }
 
-    public boolean isLoggedInUserStudent() {
-        return loggedInStudent != null;
-    }
+
 
     public void run() {
-        if (loginMenu.run().equals("exit")) return;
+        if (loginMenu.run().equals("exit")) return ;
         while (true) {
             switch (mainMenu.run()) {
                 case "teacher menu":
@@ -42,6 +40,9 @@ public class Controller {
                     break;
             }
         }
+    }
+    public boolean isLoggedInUserStudent() {
+        return loggedInStudent != null;
     }
 
     public String register(String username, String password, String role) {
